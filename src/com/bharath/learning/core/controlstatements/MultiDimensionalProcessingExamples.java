@@ -12,8 +12,8 @@ public class MultiDimensionalProcessingExamples {
 
         int rows = 10;
 
-        for (int i = 1; i <= rows; i++) {
-            for (int j = 1; j <= i; j++) {
+        for (int i = 1; i <= rows; i++) {// row
+            for (int j = 1; j <= i; j++) { // column
                 System.out.print("* ");
             }
             System.out.println();
