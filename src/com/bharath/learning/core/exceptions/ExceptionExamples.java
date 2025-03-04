@@ -40,6 +40,7 @@ public class ExceptionExamples {
             try {
                 student.display();
             } catch (NullPointerException e) {
+                e.printStackTrace();
                 System.out.println("Exception occurred:: "+ e.getMessage());
             }
         }
