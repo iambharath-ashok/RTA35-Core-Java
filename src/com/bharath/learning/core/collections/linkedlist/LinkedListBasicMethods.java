@@ -7,7 +7,7 @@ import java.util.List;
 public class LinkedListBasicMethods {
 
     public static void main(String[] args) {
-        // circular buffer what the trade off b/w LL vs AL
+        // circular buffer what the trade off b/w LL vs     1p  AL
 
         List<Integer> list = new LinkedList<>();
 
