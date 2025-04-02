@@ -1,4 +1,4 @@
-package com.bharath.learning.core.collections.linkedlist;
+package com.bharath.learning.core.collections.list.linkedlist;
 
 public class CustomLinkedList {
 

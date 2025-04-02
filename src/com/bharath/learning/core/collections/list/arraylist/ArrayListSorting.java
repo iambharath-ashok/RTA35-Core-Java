@@ -1,7 +1,6 @@
-package com.bharath.learning.core.collections.arraylist;
+package com.bharath.learning.core.collections.list.arraylist;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
