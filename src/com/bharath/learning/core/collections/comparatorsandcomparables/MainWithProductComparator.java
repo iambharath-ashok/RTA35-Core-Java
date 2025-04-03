@@ -17,7 +17,7 @@ public class MainWithProductComparator {
         Product product6 = new Product("Smart TV", 1000.00, 4, LocalDate.of(2024, 8, 25), 5);
 
 
-        Comparator<Product> productQuantityComparator = Comparator.comparing(Product::getQuantity);
+        Comparator<Product> productQuantityComparator = Comparator.comparing(Product::getQuantity).reversed();
         Comparator<Product> productPriceComparator = Comparator.comparing(Product::getPrice);
         Comparator<Product> productComparator = Comparator.comparing(Product::getRatings)
                 .thenComparing(Product::getName)
