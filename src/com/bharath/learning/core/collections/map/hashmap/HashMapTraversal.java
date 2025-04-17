@@ -34,9 +34,13 @@ public class HashMapTraversal {
 
         // Traversing the HashMap using forEach() method (Java 8 and above)
         System.out.println("\nTraversing using forEach():");
-        fruitsMap.forEach((fruitName, fruitCount) -> {
+        fruitsMap.forEach(
+
+                (fruitName, fruitCount) -> {
             System.out.println(fruitName + " => " + fruitCount);
-        });
+        }
+
+        );
 
         // Traversing the HashMap using Iterator
         System.out.println("\nTraversing using Iterator:");
