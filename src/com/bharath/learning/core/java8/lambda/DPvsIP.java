@@ -1,4 +1,4 @@
-package com.bharath.learning.core.java8;
+package com.bharath.learning.core.java8.lambda;
 
 import java.util.ArrayList;
 import java.util.Arrays;

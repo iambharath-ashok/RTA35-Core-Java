@@ -1,4 +1,4 @@
-package com.bharath.learning.core.java8;
+package com.bharath.learning.core.java8.lambda;
 
 
 import java.util.Arrays;
@@ -41,20 +41,21 @@ class Main {
 
 
 
-
-
-
-
-
       /*  for (String fruit : fruits) {
             System.out.println(fruit.length());
         }*/
 
+    }
 
-
-
-
-
+    public void methodName(String name, int age) {
+        System.out.println("Name: " + name + ", Age: " + age);
 
     }
+
+  /*
+
+  (String name, int age) -> {
+        System.out.println("Name: " + name + ", Age: " + age);
+
+    }*/
 }
