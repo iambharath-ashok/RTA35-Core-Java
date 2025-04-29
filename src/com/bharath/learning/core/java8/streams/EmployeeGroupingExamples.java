@@ -1,7 +1,9 @@
 package com.bharath.learning.core.java8.streams;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class EmployeeGroupingExamples {
@@ -41,6 +43,37 @@ public class EmployeeGroupingExamples {
                 .stream().forEach(System.out::println);
 
 
+        // Group by department and get the highest salary in each department
+        // first group by deparment
+        // then get the max salary in each department
+        // compare the salary of each employee
+
+        Map<String, Optional<Employee>> highestPaidEmployeeByDept = employeeList.stream().collect(
+                Collectors.groupingBy(Employee::getDepartment,
+                        Collectors.maxBy(Comparator.comparingInt(Employee::getSalary))));
+
+        System.out.println("Group by department and get the highest salary in each department");
+        highestPaidEmployeeByDept.entrySet().stream()
+                .forEach(entry -> {
+                    String department = entry.getKey();
+                    Optional<Employee> employee = entry.getValue();
+                    System.out.println("Department: " + department + ", Highest Paid Employee: " + employee);
+                });
+
+
+        // Group by department and get the average salary in each department
+
+        Map<String, Double> avgSalaryByDept = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment,
+                        Collectors.averagingInt(Employee::getSalary)));
+
+        System.out.println("Group by department and get the average salary in each department");
+        avgSalaryByDept.entrySet().stream()
+                .forEach(entry -> {
+                    String department = entry.getKey();
+                    Double averageSalary = entry.getValue();
+                    System.out.println("Department: " + department + ", Average Salary: " + averageSalary);
+                });
 
 
     }
