@@ -9,8 +9,6 @@ public class ImplementingCallable {
         ExecutorService executorService = Executors.newSingleThreadExecutor();
         Future<String> result = executorService.submit(myCallable);
         System.out.println("Callable Result: " + result.get());
-
-
     }
 }
 

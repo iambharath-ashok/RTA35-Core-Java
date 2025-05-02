@@ -26,6 +26,14 @@ class MyThread extends Thread {
         System.out.println("Thread Name: " + Thread.currentThread().getName());
     }
 
+/*@Override
+    public void start() {
+        System.out.println("Starting thread: " + getName());
+        System.out.println("Executing start method");
+    start0();
+    }*/
+
+   // private native void start0();
 }
 
 
