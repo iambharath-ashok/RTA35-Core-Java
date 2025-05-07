@@ -49,6 +49,7 @@ class FlightReservationApp {
 
     public static void main(String[] args) throws InterruptedException {
 
+        // Flight object is shared among passengers
         Flight flight = new Flight();
 
         Passenger passenger1 = new Passenger("John", flight);
