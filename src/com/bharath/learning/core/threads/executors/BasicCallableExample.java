@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 public class BasicCallableExample {
 
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
+    public static void main(String[] args) throws ExecutionException, InterruptedException, TimeoutException {
 
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
@@ -18,11 +18,12 @@ public class BasicCallableExample {
         } ;
 
         // Future is a placeholder for the result of the callable
+        //Callable submitted to the executor service and it will run in a separate thread
         Future<String> future =  executorService.submit(callable);
         System.out.println(Thread.currentThread().getName()+":: Doing some other work....");
         //Future.get() will block the current thread until the callable is completed
         //main thread will wait for the callable to complete
-        String callableReturnedValue = future.get();
+        String callableReturnedValue = future.get(2000, TimeUnit.MILLISECONDS);
         System.out.println(Thread.currentThread().getName()+":: Callable returned value: "+callableReturnedValue);
 
         executorService.shutdown();
